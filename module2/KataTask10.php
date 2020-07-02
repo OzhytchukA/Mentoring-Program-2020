@@ -54,6 +54,6 @@ $object_oriented_php = new class {
 
 	public function complete()
 	{
-		return "Hooray, I've finally completed the entire \"Object-Oriented PHP\" Kata Series!!!";
+		return 'Hooray, I\'ve finally completed the entire "Object-Oriented PHP" Kata Series!!!';
 	}
 };
