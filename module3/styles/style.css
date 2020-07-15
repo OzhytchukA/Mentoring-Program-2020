@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.form {
+    margin: 10px 35px;
+}
+
+.content {
+    margin: 50px;
+}
+
+strong {
+    display: inline-block;
+    margin-right: 5px;
+}
