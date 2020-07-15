@@ -11,6 +11,10 @@
     margin: 50px;
 }
 
+.content div {
+    margin: 10px 0;
+}
+
 strong {
     display: inline-block;
     margin-right: 5px;

@@ -117,6 +117,11 @@
 		</div>
 
 		<div>
+			<strong>Report was generated at:</strong>
+			<?php echo date('n/j/Y - g:i A'); ?>
+		</div>
+
+		<div>
 			<strong>The reversed text:</strong>
 			<?php echo mb_strrev($_GET['text']); ?>
 		</div>
