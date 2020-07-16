@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sort by {{ id }}{% endblock %}
+
+{% block body %}
+	<table class="table" style="margin-top: 25px">
+		<thead>
+		<tr>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Description</th>
+			<th>Price</th>
+			<th>Url</th>
+			<th>actions</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% for book in books %}
+			<tr>
+				<td>{{ book.id }}</td>
+				<td>{{ book.title }}</td>
+				<td>{{ book.author }}</td>
+				<td>{{ book.description }}</td>
+				<td>{{ book.price }}</td>
+				<td>{{ book.url }}</td>
+				<td>
+					<a href="{{ path('book_show', {'id': book.id}) }}">show</a>
+					<a href="{{ path('book_edit', {'id': book.id}) }}">edit</a>
+				</td>
+			</tr>
+		{% else %}
+			<tr>
+				<td colspan="7">no records found</td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+
+	<a href="{{ path('book_index') }}">Back to the homepage</a>
+{% endblock %}
