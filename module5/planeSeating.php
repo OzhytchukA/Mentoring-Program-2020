@@ -7,15 +7,9 @@ function planeSeat($a)
 	$letter = substr($a, -1);
 
 	$seats = [
-		'A' => 'Left',
-		'B' => 'Left',
-		'C' => 'Left',
-		'D' => 'Middle',
-		'E' => 'Middle',
-		'F' => 'Middle',
-		'G' => 'Right',
-		'H' => 'Right',
-		'K' => 'Right'
+		'A' => 'Left', 'B' => 'Left', 'C' => 'Left',
+		'D' => 'Middle', 'E' => 'Middle', 'F' => 'Middle',
+		'G' => 'Right', 'H' => 'Right', 'K' => 'Right'
 	];
 
 	if ($number <= 60 && array_key_exists($letter, $seats)) {
