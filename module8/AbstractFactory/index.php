@@ -6,9 +6,7 @@ use AbstractFactory\Entity\Person;
 use AbstractFactory\Factories\FSFactory;
 use AbstractFactory\Factories\DBFactory;
 
-$person = (new Person())
-    ->setFirstName('Andrii')
-    ->setLastName('Ozhytchuk');
+$person = (new Person())->setFirstName('Andrii')->setLastName('Ozhytchuk');
 
 $repository = (new DBFactory())->getData();
 
