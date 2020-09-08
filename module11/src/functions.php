@@ -5,8 +5,9 @@ function mb_count_chars($input)
 	$unique = array();
 	for ($i = 0; $i < $l; $i++) {
 		$char = mb_substr($input, $i, 1, 'UTF-8');
-		if (!array_key_exists($char, $unique))
+		if (!array_key_exists($char, $unique)) {
 			$unique[$char] = 0;
+		}
 		$unique[$char]++;
 	}
 	return $unique;
@@ -83,7 +84,7 @@ function topTenWords($str, $sortAsc = true)
 
 	foreach ($arrayOfWords as $str) {
 		$trimStr = preg_replace($pattern, '', $str);
-		$words[] = [ 'len' => mb_strlen($trimStr), 'word' => $trimStr];
+		$words[] = ['len' => mb_strlen($trimStr), 'word' => $trimStr];
 	}
 
 	array_multisort($words, $sortAsc ? SORT_ASC : SORT_DESC);
